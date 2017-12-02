@@ -27,12 +27,6 @@ var funkyFunction = function() {
 // We want to set theFunk equal to "FUNKY!" using our funkyFunction.
 // NOTE: you only need to modify the code below this line.
 
-/*
-var theFunk = funkyFunction();
-theFunk;
-theFunk();
-*/
-
 
 var funkyFunction = function() {
   return function() {
@@ -42,5 +36,28 @@ var funkyFunction = function() {
 
 var theFunk = funkyFunction();
 theFunk;
-theFunk();
 theFunk = theFunk();
+
+/*N
+ote to self:
+
+The last call of the function returns the string required but is not assinged as a variable
+So you have to invoke the function AND assing the value.
+
+var funkyFunction = function() {
+  return function() {
+    return "FUNKY!"
+  }
+}
+undefined
+var theFunk = funkyFunction();
+undefined
+theFunk;
+ƒ () {
+    return "FUNKY!"
+  }
+theFunk();
+"FUNKY!"
+
+
+*/
